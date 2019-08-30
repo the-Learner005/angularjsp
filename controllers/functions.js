@@ -20,3 +20,6 @@ controller('foreachExample',['$scope',function($scope){
 	},$scope.logs);
 
 }]);
+
+
+

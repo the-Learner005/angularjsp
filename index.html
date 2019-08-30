@@ -9,8 +9,18 @@
 	<!-- <script type="text/javascript" src='factory/finance.js'></script>
 	<script type="text/javascript" src='controllers/invoice2.js'></script> -->
 	<script type="text/javascript" src='controllers/functions.js'></script>
+	<script type="text/javascript" src='modules/directives.js'></script>
 
 </head>
+<style>
+.my-form {
+   transition:all linear 0.5s;
+   background: transparent;
+ }
+ .my-form.ng-invalid {
+   background: red;
+ }
+</style>
 <body>
 <!-- <div ng-app='invoice2' ng-controller='InvoiceController as invoice'>
 	<b>Invoice</b>
@@ -44,8 +54,14 @@
 	<pre>form = {{user | json}}</pre>
   <pre>leader = {{leader | json}}</pre>
 </div> -->
-<div ng-app='functions' ng-controller='foreachExample'>
+<!-- <div ng-app='functions' ng-controller='foreachExample'>
 	<p>{{logs}}</p>
+</div> -->
+<div ng-app='directives' ng-controller='FormController'>
+	<form name="testForm" ng-controller='FormController' class='my-form'>
+		userType: <input type="text" name="usertype" ng-model='userType' required>
+		<span class="error" ng-show="myForm.input.$error.required">Required</span><br>
+	</form>
 </div>
 </body>
 </html>
