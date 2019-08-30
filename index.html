@@ -32,7 +32,7 @@
 		<button ng-click='invoice.pay()'>Pay</button>
 	</div>
 </div> -->
-<div ng-app='functions' ng-controller='copyExample'>
+<!-- <div ng-app='functions' ng-controller='copyExample'>
 	<form novalidate>
 		<label>Name: <input type="text" ng-model="user.name"/></label><br>
 		<label>Age: <input type="number" ng-model="user.age"/></label><br>
@@ -43,6 +43,9 @@
 	</form>
 	<pre>form = {{user | json}}</pre>
   <pre>leader = {{leader | json}}</pre>
+</div> -->
+<div ng-app='functions' ng-controller='foreachExample'>
+	<p>{{logs}}</p>
 </div>
 </body>
 </html>
