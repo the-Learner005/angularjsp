@@ -61,7 +61,12 @@
 	<form name="testForm" ng-controller='FormController' class='my-form'>
 		userType: <input type="text" name="usertype" ng-model='userType' required>
 		<span class="error" ng-show="myForm.input.$error.required">Required</span><br>
+		<label>Value2:
+    		<input type="checkbox" ng-model="checkboxModel.value2" ng-true-value="'You Checked'" ng-false-value="'You Unchcked'">
+   		</label><br/>
+   		<tt>value2 = {{checkboxModel.value2}}</tt><br/>
 	</form>
+	<br>
 </div>
 </body>
 </html>
