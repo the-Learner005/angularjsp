@@ -20,6 +20,9 @@
  .my-form.ng-invalid {
    background: red;
  }
+ .my-form.ng-valid{
+ 	background:green;
+ }
 </style>
 <body>
 <!-- <div ng-app='invoice2' ng-controller='InvoiceController as invoice'>
@@ -57,14 +60,22 @@
 <!-- <div ng-app='functions' ng-controller='foreachExample'>
 	<p>{{logs}}</p>
 </div> -->
+<h1>Form Directives</h1>
 <div ng-app='directives' ng-controller='FormController'>
 	<form name="testForm" ng-controller='FormController' class='my-form'>
-		userType: <input type="text" name="usertype" ng-model='userType' required>
-		<span class="error" ng-show="myForm.input.$error.required">Required</span><br>
+		Type: <input type="text" name="usertype" ng-model='userType' required>
+		<span class="error" ng-show="testForm.userType.$error.required">Required</span><br>
 		<label>Value2:
-    		<input type="checkbox" ng-model="checkboxModel.value2" ng-true-value="'You Checked'" ng-false-value="'You Unchcked'">
+    		<input type="checkbox" ng-model="checkboxModel.value2" ng-true-value="'You Checked'" ng-false-value="'You Unchecked'">
    		</label><br/>
+
    		<tt>value2 = {{checkboxModel.value2}}</tt><br/>
+
+   		<label>
+   			Email: <input type="email" name="userEmail" ng-model="email" required>
+   			<span class="error" ng-show="testForm.userEmail.$error.required">Email is Required</span>
+   			<span  ng-show="testForm.userEmail.$error.email">Invalid Email</span>
+   		</label>
 	</form>
 	<br>
 </div>
