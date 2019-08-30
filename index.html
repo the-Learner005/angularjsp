@@ -5,10 +5,13 @@
 	<script type="text/javascript" src="assets/ng/angular.min.js"></script>
 	<script type="text/javascript" src="assets/ng/angular-resource.js"></script>
 	<script type="text/javascript" src="assets/ng/angular-route.min.js"></script>
-	<script type="text/javascript" src='controllers/invoice1.js'></script>
+	<!-- <script type="text/javascript" src='controllers/invoice1.js'></script> -->
+	<script type="text/javascript" src='factory/finance.js'></script>
+	<script type="text/javascript" src='controllers/invoice2.js'></script>
+
 </head>
 <body>
-<div ng-app='invoice1' ng-controller='InvoiceController as invoice'>
+<div ng-app='invoice2' ng-controller='InvoiceController as invoice'>
 	<b>Invoice</b>
 	<div>
 		Quantity: <input type="number" min='0' ng-model='invoice.qty' required>
